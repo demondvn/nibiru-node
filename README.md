@@ -2,13 +2,19 @@
 docker build . -t nibiru
 
 cd  /mnt/blockstore/biniru/config 
+
 wget https://networks.testnet.nibiru.fi/nibiru-testnet-2/genesis -O genesis.json
 
 NETWORK=nibiru-testnet-2
+
 sed -i 's|seeds =.*|seeds = "'$(curl -s https://networks.testnet.nibiru.fi/$NETWORK/seeds)'"|g' config.toml
+
 sed -i 's|enable =.*|enable = true|g' config.toml
+
 sed -i 's|rpc_servers =.*|rpc_servers = "'$(curl -s https://networks.testnet.nibiru.fi/$NETWORK/rpc_servers)'"|g' config.toml
+
 sed -i 's|trust_height =.*|trust_height = "'$(curl -s https://networks.testnet.nibiru.fi/$NETWORK/trust_height)'"|g' config.toml
+
 sed -i 's|trust_hash =.*|trust_hash = "'$(curl -s https://networks.testnet.nibiru.fi/$NETWORK/trust_hash)'"|g' config.toml
 
 
