@@ -1,7 +1,7 @@
 # nibiru-node
 docker build . -t nibiru
 
-cd  /mnt/blockstore/biniru/config && wget wget https://networks.testnet.nibiru.fi/nibiru-testnet-2/genesis
+cd  /mnt/blockstore/biniru/config && wget wget https://networks.testnet.nibiru.fi/nibiru-testnet-2/genesis.json
 
 docker run -it -v /mnt/blockstore/nibiru/:/root/.nibid  --name nibiru nibiru tendermint unsafe-reset-all
 
