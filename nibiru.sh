@@ -66,7 +66,7 @@ echo -e '\n\e[42mRunning\e[0m\n' && sleep 1
 echo -e '\n\e[42mCreating a service\e[0m\n' && sleep 1
 
 
-
+nibid start
 
 
 
