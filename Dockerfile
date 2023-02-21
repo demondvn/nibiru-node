@@ -5,9 +5,9 @@ RUN apt update && DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt install -y wget 
 COPY nibiru.sh nibiru.sh
 RUN chmod +x nibiru.sh
 RUN apt install sudo -y
-RUN echo -e "MonNode\n" | /bin/bash nibiru.sh
+# RUN echo -e "MonNode\n" | /bin/bash nibiru.sh
 
 
 EXPOSE 26656
 EXPOSE 26657
-ENTRYPOINT ["nibid", "start"] 
+CMD ./nibiru.sh
