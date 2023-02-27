@@ -1,4 +1,4 @@
-FROM golang:lasted
+FROM golang
 
 RUN apt update && DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt install -y wget curl make clang pkg-config libssl-dev build-essential git jq ncdu bsdmainutils htop
 ARG NIBIRU_NODENAME=
