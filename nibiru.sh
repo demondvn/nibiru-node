@@ -3,7 +3,6 @@
 
 CHAIN_ID=nibiru-itn-1
 NODE_HOME=$HOME/.nibid
-sudo mv ./build/nibid /usr/local/bin/ || exit
 nibid init "$NIBIRU_NODENAME" --chain-id="$CHAIN_ID"
 echo 'export CHAIN_ID='\"${CHAIN_ID}\" >> $HOME/.bash_profile
 
