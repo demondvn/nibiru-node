@@ -25,7 +25,7 @@ sed -i 's|^snapshot-interval *=.*|snapshot-interval = 2000|g' $HOME/.nibid/confi
 sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0001unibi"|g' $HOME/.nibid/config/app.toml
 sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.nibid/config/config.toml
 
-wget -O $HOME/.nibid/config/genesis.json https://raw.githubusercontent.com/Pa1amar/testnets/main/nibiru/nibiru-itn-1/genesis.json
+curl -s https://rpc.itn-1.nibiru.fi/genesis | jq -r .result.genesis > $HOME/.nibid/config/genesis.json
 nibid tendermint unsafe-reset-all --home $HOME/.nibid --keep-addr-book
 # wget https://api.nodes.guru/nibiru_addrbook.json -o $HOME/.nibid/config/addrbook.json
 echo -e '\n\e[42mRunning\e[0m\n' && sleep 1
