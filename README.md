@@ -2,7 +2,7 @@
     docker build . -t nibiru
 ## Run
 
-    docker run -d -e NIBIRU_NODENAME=MonPham -v /mnt/blockstore/nibiru/:/root/.nibid -p 26656:26656 -p 26657:26657 --name nibiru nibiru
+    docker run -d -e NIBIRU_NODENAME=MonPham --restart unless-stopped -v /mnt/blockstore/nibiru/:/root/.nibid -p 26656:26656 -p 26657:26657 --name nibiru nibiru
 ## Snapshot
     docker stop nibiru
     <!-- docker exec -it nibiru /bin/bash -->
