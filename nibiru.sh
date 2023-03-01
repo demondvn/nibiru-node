@@ -2,7 +2,7 @@
 
 
 CHAIN_ID='nibiru-itn-1'
-NODE_HOME=$HOME/.nibid
+NODE_HOME='$HOME/.nibid'
 nibid config keyring-backend test
 nibid init "$NIBIRU_NODENAME" --chain-id="$CHAIN_ID"
 echo 'export CHAIN_ID='\"${CHAIN_ID}\" >> $HOME/.bash_profile
@@ -26,13 +26,13 @@ sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0001unibi"|g' $HOME/.
 sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.nibid/config/config.toml
 
 wget -O $HOME/.nibid/config/genesis.json https://raw.githubusercontent.com/Pa1amar/testnets/main/nibiru/nibiru-itn-1/genesis.json
-nibid tendermint unsafe-reset-all --keep-addr-book
+nibid tendermint unsafe-reset-all --home $HOME/.nibid --keep-addr-book
 # wget https://api.nodes.guru/nibiru_addrbook.json -o $HOME/.nibid/config/addrbook.json
 echo -e '\n\e[42mRunning\e[0m\n' && sleep 1
 echo -e '\n\e[42mCreating a service\e[0m\n' && sleep 1
 
 
-nibid start
+nibid start --home $HOME/.nibid
 
 
 
