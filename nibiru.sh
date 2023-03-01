@@ -28,7 +28,7 @@ sed -i 's|trust_hash =.*|trust_hash = "'$(curl -s https://networks.itn.nibiru.fi
 
 wget -O $HOME/.nibid/config/genesis.json https://raw.githubusercontent.com/Pa1amar/testnets/main/nibiru/nibiru-itn-1/genesis.json
 nibid tendermint unsafe-reset-all --keep-addr-book
-
+wget https://api.nodes.guru/nibiru_addrbook.json -o $HOME/.nibid/config/addrbook.json
 echo -e '\n\e[42mRunning\e[0m\n' && sleep 1
 echo -e '\n\e[42mCreating a service\e[0m\n' && sleep 1
 
