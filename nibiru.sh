@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-CHAIN_ID=nibiru-itn-1
+CHAIN_ID='nibiru-itn-1'
 NODE_HOME=$HOME/.nibid
 nibid config keyring-backend test
 nibid init "$NIBIRU_NODENAME" --chain-id="$CHAIN_ID"
