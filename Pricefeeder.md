@@ -40,7 +40,7 @@
     sudo systemctl daemon-reload
     sudo systemctl enable pricefeeder
     sudo systemctl start pricefeeder
-    sudo systemctl stop pricefeeder
+<!--     sudo systemctl stop pricefeeder -->
 # Check log
     journalctl -fu pricefeeder
 
