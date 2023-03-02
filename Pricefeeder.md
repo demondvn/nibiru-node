@@ -1,7 +1,7 @@
 # Pricefeeder
     apt install curl -y
     curl -s https://get.nibiru.fi/pricefeeder! | bash
-    # read -p "my pricefeeder 24 word mnemonic phrase goes here... " FEEDER_MNEMONIC
+
     export FEEDER_MNEMONIC= "my pricefeeder 24 word mnemonic phrase goes here... "
     export CHAIN_ID="nibiru-itn-1"
     export GRPC_ENDPOINT="localhost:9090"
