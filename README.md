@@ -2,7 +2,7 @@
     docker build . -t nibiru
 ## Run change `MonPham` `/mnt/blockstore/nibiru/` to yourself
 
-    docker run -d -e NIBIRU_NODENAME=MonPham --restart unless-stopped -v /mnt/blockstore/nibiru/:/root/.nibid -p 26656:26656 -p 26657:26657 --name nibiru nibiru
+    docker run -d -e NIBIRU_NODENAME=MonPham --restart unless-stopped -v /root/.nibid:/root/.nibid -p 26656:26656 -p 26657:26657 --name nibiru nibiru
 ## Snapshot
     docker stop nibiru
     
