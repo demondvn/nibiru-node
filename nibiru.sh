@@ -8,10 +8,10 @@ nibid init "$NIBIRU_NODENAME" --chain-id="$CHAIN_ID"
 echo 'export CHAIN_ID='\"${CHAIN_ID}\" >> $HOME/.bash_profile
 
 
-PEERS=""
+# PEERS=""
 
 sed -i 's|seeds =.*|seeds = "'$(curl -s https://networks.itn.nibiru.fi/$CHAIN_ID/seeds)'"|g' $HOME/.nibid/config/config.toml
-sed -i 's|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.nibid/config/config.toml
+# sed -i 's|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.nibid/config/config.toml
 sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.nibid/config/config.toml
 
 
