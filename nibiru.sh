@@ -4,7 +4,7 @@
 CHAIN_ID='nibiru-itn-1'
 NODE_HOME='$HOME/.nibid'
 nibid config keyring-backend test
-# nibid init "$NIBIRU_NODENAME" --chain-id="$CHAIN_ID"
+nibid init "$NIBIRU_NODENAME" --chain-id="$CHAIN_ID"
 echo 'export CHAIN_ID='\"${CHAIN_ID}\" >> $HOME/.bash_profile
 
 
